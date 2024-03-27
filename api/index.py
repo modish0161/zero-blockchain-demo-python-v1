@@ -11,7 +11,7 @@ CORS(app)
 blch = ZeroBlockchain()
 
 # Define a route to return the blockchain data
-@app.route("/api/blockchain", methods=['GET'])
+@app.route("/api/python", methods=['GET'])
 def get_blockchain():
     blockchain_data = [block.__dict__ for block in blch.chain]
     return jsonify(blockchain_data)

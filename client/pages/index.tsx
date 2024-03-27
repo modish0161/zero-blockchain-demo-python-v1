@@ -21,14 +21,14 @@ const Index: React.FC = () => {
   }, []);
 
   const fetchBlockchainData = () => {
-    fetch('http://localhost:8080/api/blockchain')
+    fetch('https://zero-blockchain-demo-python-v1.vercel.app/api/blockchain')
       .then(response => response.json())
       .then((data: Block[]) => setBlockchainData(data))
       .catch(error => console.error('Error fetching blockchain data:', error));
   };
 
   const addNewBlock = () => {
-    fetch('http://localhost:8080/api/add_block', {
+    fetch('https://zero-blockchain-demo-python-v1.vercel.app/api/add_block', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
